@@ -1,0 +1,151 @@
+<div class="parent">
+
+
+
+<div class="functions">
+  
+  <input type="text" placeholder="Search student" [(ngModel)]="term" (keyup)="filter()">
+  
+  <select [(ngModel)]="column" >
+  
+  <option>name</option>
+  
+  <option >phone</option>
+  
+  <option >city</option>
+  
+  <option >dob</option>
+  
+  <option >email</option>
+  
+ </select>
+  
+ 
+  
+ <select [(ngModel)]="order" >
+  
+ <option>asc</option>
+  
+<option >desc</option>
+  
+  </select>
+  
+ 
+  
+  <button class="btn btn-primary" (click)="sort()" >Sort</button>
+  
+  <select [(ngModel)]="limit" >
+  
+  <option>10</option>
+  
+<option >20</option>
+  
+  <option >30</option>
+  
+  <option >40</option>
+  
+  <option >50</option>
+  
+  <option >60</option>
+  
+ </select>
+  
+ 
+  
+ <select [(ngModel)]="page" >
+  
+<option>1</option>
+  
+  <option >2</option>
+  
+  <option >3</option>
+  
+  <option >4</option>
+  
+    </select>
+  
+   <button class="btn btn-primary" (click)="pagination()" >pagination</button>
+  
+  
+  
+  <button class="btn btn-success" routerLink="/createidcard">Create Student Id</button>
+  
+ </div>
+  
+  
+  
+ 
+  
+  
+  
+<div class="card"*ngFor="let idcard of idcard">
+  
+  
+  
+  <div class="head" >
+  
+  
+  
+   <img src="{{idcard.school_logo}}" alt="">
+  
+   <div class="sname"><h2>{{idcard.school_name}}</h2></div>
+  
+  
+  
+  
+  
+  
+  
+  <div class="sdetails"><p>City: {{idcard.school_city}},<i>&nbsp;</i> Ph.no:{{idcard.school_pin}}</p></div>
+  
+  
+  
+   </div>
+  
+  <div class="body">
+  
+  <div class="details">
+  
+  <p><b>Name:</b><i>&nbsp;</i>{{idcard.name}}</p>
+  
+  <p><b>Phone:</b><i>&nbsp;</i>{{idcard.phone}}</p>
+  
+  <p><b>City:</b><i>&nbsp;</i>{{idcard.city}}</p>
+  
+  <p><b>D.O.B:</b><i>&nbsp;</i>{{idcard.dob}}</p>
+  
+  <p style="color: red;"><b>Email:</b><i>&nbsp;</i>{{idcard.email}}</p>
+  
+  </div>
+  
+  <div class="photo">
+  
+  <img id="newi" src="{{idcard.profile_picture}}" alt="">
+  
+<h6 id="pin">Principal</h6>
+  
+  </div>
+  
+  </div>
+  
+
+  
+  <div class="footer">
+  
+  <button class="btn btn-dark" routerLink="/welcome/student-details/{{idcard.id}}">View</button>
+  
+   <button class="btn btn-primary"routerLink="/welcome/edit-student/{{idcard.id}}" >Edit</button>
+  
+   <button class="btn btn-danger" (click)="delete(idcard.id)" >Delete</button>
+  
+  
+  
+   </div>
+  
+  
+  
+  </div>
+  
+  
+  
+  </div>

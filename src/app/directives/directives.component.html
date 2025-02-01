@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directives</title>
+  <style>
+h1{
+  color:chocolate;
+  font-size: medium;
+}
+
+h2{
+
+  color: rgb(185, 15, 114);
+  font-family:'Courier New', Courier, monospace;
+  font-size: large;
+}
+
+  </style>
+</head>
+<body>
+  <h1> Directives</h1>
+
+<!-- <h2>{{age}}</h2>  /*use polarisation for displaying results*/
+
+<h2 *ngFor="let age of ages"> My age is :{{age}} </h2>
+
+
+<h3> {{state}}</h3>
+<ol>
+<li *ngFor="let state of states"> {{state}}</li>
+
+</ol>
+
+<ul>
+  <li *ngFor="let state of states"> {{state}}</li>
+  
+  </ul>
+
+  <select name="" id="">
+    <option value="" *ngFor="let state of states"> {{state}}</option>
+  </select> <br> -->
+
+  <!-- <h3 *ngFor="let product of products">{{product.productname}} cost is {{product.price}} </h3>  -->
+
+
+  <!-- <table border="1", [cellPadding]="10" [cellSpacing]="0">
+
+    <thead>
+      <tr>
+        <th> S.No</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{product.productname}}</td>
+        <td>{{product.price}}</td>
+      </tr>
+    </tbody>
+</table> -->
+
+<h1>{{today}}</h1>
+
+<h1> {{today | date}}</h1>
+
+<h1> {{today | date:"dd/MM/yyyy"}}</h1> <!--MM for Months--> <!--mm for Minutes-->
+
+<h1> {{today | date:"yyyy-MM-dd"}}</h1>
+
+
+</body>
+</html>
+
+
+<h1 *ngIf="true"> Hi Team</h1>
+<h1 *ngIf="false"> This is Anil</h1>
+
+<table border="1" [cellPadding]="1" [cellSpacing]="0">
+
+  <!-- <thead>
+    <tr>
+      <th> S.No</th>
+      <th>Product Name</th>
+      <th>Product Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{product.productname}}</td>
+      <td  [ngStyle]="{'color':product.price<=50000 ? 'green': 'red'}">{{product.price}}</td> Inline styling
+      <td [ngClass]="{'green':product.price<=50000, 'red':product.price>1000000}"> {{product.price}} 
+        Class styling-->
+      <!-- </td>
+    </tr>
+  </tbody> -->
+<!-- </table>  -->
+
+
+
+
+
+
+
+
+
+

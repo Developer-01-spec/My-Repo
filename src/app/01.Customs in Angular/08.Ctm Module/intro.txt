@@ -1,0 +1,99 @@
+
+In Angular, loading refers to how modules are loaded into an application. 
+
+The two main loading strategies are Eager loading & Lazy loading. 
+
+Eager loading:
+
+   Loads all modules when the application starts
+   Can improve the performance of small applications
+   By default, Angular uses eager loading for all modules in the AppModule file
+
+Lazy loading: 
+
+    Loads modules when they are needed, based on the user's navigation
+    Can improve the performance of larger applications
+    Reduces the initial bundle size of the application
+
+Preloading: 
+
+    Loads modules in the background after the application starts
+    Can improve the performance of larger applications
+    Not as frequently used as eager loading and lazy loading
+
+When to use eager loading, lazy loading, or preloading 
+
+     Eager loading: Useful for small applications because it makes subsequent requests faster
+
+     Lazy loading: Useful when the application size is growing
+
+     Preloading: Can improve the performance of larger applications
+
+==========================================================================
+🕺 Eager Loading:
+
+--------------------------------------------------------------------------
+
+Step1: ng g module about-us 
+
+Step2: 
+
+open integrated terminal generate new components 
+
+     ng g c about-ceo 
+
+     ng g c about-company
+
+Step3: 
+
+import about-us module in app.module.ts file
+
+☝ the above process are called eager Loading..! 👆
+
+-------------------------------------------------------------------------------------------------
+ 
+ 🛌Lazy Loading:
+ 
+ ng generate module payment
+
+ng g m payment --routing // it creates routing module also
+
+it can generate payment.module.ts and   payment-routing.module.ts file
+
+in this payment module we can create another two components
+
+ng g c card  and ng g c upi 
+
+then we can give routing in payment-routing.module.ts file like
+
+{path: 'card' component: CardComponent}
+
+{path:'upi' component: UpiComponent}
+
+after this we can create routing in app-routing.module.ts file
+
+{ 
+     path:'payment',
+       loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)
+}
+
+when we open payment module the remaining two components( card & upi ) also loading. other wise it wont open.
+
+
+👉this type of loading is called lazy loading.👈
+
+-----------------------------------------------------------------------------------------------
+
+preloading:
+
+after eager loading lazy loading componets are loading in between this is called preloading ..
+
+we can use preloading strategies in app-routing.module.ts file.
+
+@ngModule({
+
+     imports:[RouterModule, forRoot(routes,{preloadingStrategy:PreloadingAllModules})],
+})
+
+-------------------------------------------------------------------------------------------------
+

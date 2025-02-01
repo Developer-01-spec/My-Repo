@@ -1,0 +1,26 @@
+
+<div class="container">
+
+  <div class="cards" *ngFor="let myntra of myntra" >
+
+    <img src="{{myntra.image}}" alt="">
+ 
+ 
+  <div class="rating">
+    {{myntra.rating.rate}} <br>
+    
+
+  </div>
+    <div class="details">
+        <h5 class="cat"> {{myntra.category}} </h5>
+        <h3 class="name">{{myntra.title}}</h3>
+        <h2 class="price">Rs:{{myntra.price}}/-</h2>
+        <p> {{myntra.description |slice:0:40}}........ </p>
+        
+      </div>
+  </div>
+</div>
+
+
+
+

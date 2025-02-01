@@ -1,0 +1,146 @@
+/* Basic Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #aaf8de;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #007BFF;
+}
+
+/* Form Styling */
+form {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #ec8888;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+input[type="month"] {
+  margin-bottom: 15px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Form Group and Label Styling */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+div[formGroupName] {
+  margin-bottom: 20px;
+}
+
+/* Nested Form Group Styling */
+div[formGroupName="address"] input {
+  width: calc(50% - 10px);
+  margin-right: 10px;
+}
+
+div[formGroupName="address"] input:last-child {
+  margin-right: 0;
+}
+
+div[formGroupName="marks"] input {
+  width: 45%;
+  margin-right: 10px;
+}
+
+div[formGroupName="marks"] input:last-child {
+  margin-right: 0;
+}
+
+/* Validation Messages */
+p {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Specific Button for Delete */
+button[ng-click="delete(i)"] {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  margin-top: 5px;
+  width: auto;
+}
+
+button[ng-click="delete(i)"]:hover {
+  background-color: #d32f2f;
+}
+
+/* Dynamic Form Styling */
+label[for="type"] {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+input[type="radio"] {
+  margin: 0 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+      padding: 20px;
+      margin: 10px;
+  }
+
+  div[formGroupName="address"] input,
+  div[formGroupName="marks"] input {
+      width: 100%;
+      margin-right: 0;
+  }
+
+  button {
+      width: 100%;
+  }
+
+  button[ng-click="delete(i)"] {
+      width: 100%;
+  }
+}

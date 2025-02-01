@@ -1,0 +1,23 @@
+<h2>Email</h2>
+
+
+<div class="parent">
+  <div class="cont">
+      <table class="tb">
+          <thead>
+              <tr>
+                  <th>id</th>
+                  <th>title</th>
+                  <!-- <th>completed</th> -->
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let mail of mail">
+                  <td>{{mail.id}}</td>
+                  <td [ngClass]="{'color1':mail.completed==true, 'color2':mail.completed==false}">{{mail.title}}</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
+</div>

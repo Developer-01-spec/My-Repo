@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rectangle</title>
+   
+  </head>
+  <body>
+    <div class="container">
+      <h1>Rectangle</h1>
+      <label for="">Length</label>
+      <input type="number" [(ngModel)]="length" /> <br />
+
+      <label for="">Breadth</label>
+      <input type="number" [(ngModel)]="breadth" /> <br />
+      <!-- [(ngModel)] is used for two way binding-->
+
+      <button
+        class="btn1"
+        [disabled]="!length || !breadth"
+        (click)="perimeter()"
+      >
+        Perimeter
+      </button>
+      <button class="btn2" [disabled]="!length || !breadth" (click)="area()">
+        Area
+      </button>
+
+      <h2 id="result">Result is:{{ result }}</h2>
+    </div>
+  </body>
+</html>

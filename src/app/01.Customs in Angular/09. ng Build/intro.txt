@@ -1,0 +1,66 @@
+ng build
+
+crete dist filder
+
+
+index.html    --> entrypoint of the HTML files
+
+main.js   ----> app logic
+
+Polyfills: run across diffrent platforms
+
+
+Css: assets/ css 
+
+==================================================
+
+
+compilations  ( From TS to JS)   types: AOT and JIT
+
+Bundling -( Optimized JS files)
+
+Minification - It reduces the  ( existing unnecessaryy comments in our code and spaces)
+
+div                             Minification:    <div  p   </div
+        
+         p
+
+
+             div 
+
+Uglification: To remove unused declaratins and methods
+
+age:number=0;
+vehicles:any=[];
+get(){};
+
+Tree shaking:  it remove unused code or deadcode.
+
+usedcode(){
+    console.log("used code)
+}
+// usused code
+unusedcode(){
+    unusedcode(){
+        console.log("unused code")
+    }
+}
+
+Asset Optimization:
+
+
+----------------------------------------------------------------
+
+Optimization Techniques:
+
+AOT: Ahead Of Time
+
+code -->  Transpile( TS to JS) --> compile --> bundle --> download in browser --> run/open
+
+JIT:  Just In Time
+
+code --> Transpile --> bundle --> download in browser --> compile --> open
+              if any error of difficulties are in compile it will move back to compile when 
+
+
+

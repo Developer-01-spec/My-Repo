@@ -1,0 +1,46 @@
+[
+  {
+    "Vehicle": "Dodge XTS",
+    "manufacturer": "Chrysler",
+    "model": "Altima",
+    "type": "Cargo Van",
+    "fuel": "dndjasksmsmwsmm",
+    "color": "turquoise",
+    "image": "https://loremflickr.com/640/480/transport",
+    "cost": "397.00",
+    "id": "29"
+  },
+  {
+    "Vehicle": "Fiat Accord",
+    "manufacturer": "Jeep",
+    "model": "Camry",
+    "type": "Passenger Van",
+    "fuel": "Gasoline",
+    "color": "teal",
+    "image": "https://loremflickr.com/640/480/sports",
+    "cost": "276.00",
+    "id": "30"
+  },
+  {
+    "Vehicle": "Maserati PT Cruiser",
+    "manufacturer": "Kia",
+    "model": "1",
+    "type": "Sedan",
+    "fuel": "Gasoline",
+    "color": "turquoise",
+    "image": "https://loremflickr.com/640/480/people",
+    "cost": "297.00",
+    "id": "31"
+  },
+  {
+    "Vehicle": "Lamborghini Impala",
+    "manufacturer": "Nissan",
+    "model": "ATS",
+    "type": "Cargo Van",
+    "fuel": "Diesel",
+    "color": "azure",
+    "image": "https://loremflickr.com/640/480/transport",
+    "cost": "55.00",
+    "id": "32"
+  }
+]

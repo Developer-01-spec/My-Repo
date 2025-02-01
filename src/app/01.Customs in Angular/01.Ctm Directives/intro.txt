@@ -1,0 +1,42 @@
+
+Custom Directives are 
+
+create directive    ng g d capital    // ( this directive only used for cappitalize the user input alphabets)
+
+
+Note: we can create only one Custom directives for one operation.
+
+capital.directive.ts file:
+
+selector:  [appCapital]
+
+export class CapitalDirective{
+
+  constructor( private _elementRef: ElementRef){}
+
+  @HostListener('keyup')
+
+  change(){
+    this._elementRef.nativeElement.value= this._elementRef.nativeElement.value.toUpperCase()
+  }
+}
+
+Put "appCapital" in the name input in the HTML component
+
+
+Here: @HostListener: Decorator used to listen to events on the host element.
+
+
+Important Types in Custom Directives
+
+@Directive: Decorator used to define a custom directive.
+
+@Input(): Decorator used to define input properties that can be passed to the directive.
+
+@Output(): Decorator used to define output properties that can emit events from the directive.
+
+@HostBinding(): Decorator used to bind properties or methods to the host element.
+
+@HostListener(): Decorator used to listen to events on the host element.
+
+Renderer2: Service used to manipulate the DOM programmatically.

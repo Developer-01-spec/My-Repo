@@ -1,0 +1,40 @@
+<h1> Data Binding</h1>
+
+<!-- <label for="">Name:</label>
+<input type="text"> <br>
+
+<label for="">Email:</label>
+<input type="email"> <br>
+
+<label for="">Mobile:</label>
+<input type="mobile"> <br>
+
+<button (click)="Submit()"> Submit</button> <br> <br> -->
+
+
+ <!-- Interpolation // This type is used for executing the code from Javascript to Html. -->
+
+<!-- <h3> {{name}} </h3>
+<h3>{{age}}</h3>
+<h3>{{email}}</h3> -->
+
+<h3> {{user.name}}</h3> // objectname. name
+<h3> {{user.age }}</h3>
+<h3> {{user.email }}</h3>
+
+<!-- Proeprty Binding  -->
+
+<!-- <button [disabled]="isIndian" (click)="submit()"> submit</button> -->
+
+<label for="">num1:</label>
+<input type="number" [(ngModel)]="num1"> <br>
+
+<label for="">num2:</label>
+<input type="number" [(ngModel)]="num2"> <br>  [(ngModel)] is used for two way binding
+
+<button [disabled]="!num1 || !num2" (click)="sum()">Sum</button>
+
+<!-- disabled means if any of two number not in input the sum button is disbled-->
+
+<h2>Sum is: {{result}}</h2>  <!-- {{}} this is  the symbol of interpolation -->
+

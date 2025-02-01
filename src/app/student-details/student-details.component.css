@@ -1,0 +1,30 @@
+.parent {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+.child {
+  margin-top: 20px;
+}
+
+h4 {
+  color: #555;
+  font-family: 'Arial', sans-serif;
+  padding: 10px;
+  background-color: #eedfea;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+}

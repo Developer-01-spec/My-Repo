@@ -1,0 +1,15 @@
+<p>parent works!</p>
+- 
+
+
+
+<!-- <app-child [a]="10" (bEvent)="store($event)"></app-child>  -->
+ 
+
+
+
+<h2>This Value is from Child: {{response}}</h2>
+
+<input type="text" [(ngModel)]="term" placeholder="Parent Component">
+
+<app-child [star]="term" (sEvent)="catch($event)"></app-child>

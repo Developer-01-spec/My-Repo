@@ -1,0 +1,24 @@
+{
+  "folders": [
+    {
+      "path": "../../.."
+    },
+    {
+      "path": "../../../../V S Code"
+    },
+    {
+      "path": "../../../../Form Using Angular"
+    },
+    {
+      "path": "../../../../Sample Projects/SocialBook"
+    },
+    {
+      "path": "../../../../ng_material_Dashboard"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "V S Code",
+    "workbench.activityBar.iconClickBehavior": "toggle",
+    "window.autoDetectColorScheme": false
+  }
+}

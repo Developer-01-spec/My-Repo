@@ -1,0 +1,24 @@
+interface=datatype
+
+generate: ng g i user     // ng generate interface user
+
+user.ts file created
+
+export interface User{
+
+  name:string,     // Datatypes Creation
+  age:number
+
+}
+
+component.ts file 
+
+user:User={
+
+  name='',
+  age=0
+  mobile=0 // this value wasn't accept it shows error, because we didn't declare any value in the user.ts file.
+}
+
+
+

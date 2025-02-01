@@ -1,0 +1,23 @@
+
+
+go to  --> app -->  package.json --> scripts 
+
+// write your custom command 
+
+scripts:{
+
+"ng": "ng serve"  // default
+
+"build": "ng build"  // default
+
+"test": "ng test"    // default
+
+"watch": "ng build --watch --configuration development"
+
+"begin": "ng serve"  // custom command
+
+}
+
+in terminal:
+
+npm run begin    

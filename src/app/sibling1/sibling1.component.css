@@ -1,0 +1,65 @@
+.parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #ccc;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.parent p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #066780;
+  font-size: x-large;
+}
+
+.child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-area {
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+  resize: none; /* Prevent resizing */
+}
+
+textarea:focus {
+  border-color: #0c63c0;
+  outline: none;
+}
+
+.reached {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #6e0a6e;
+}
+
+.limit-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.remaining {
+  font-size: 14px;
+  color: #a7114b;
+  font-weight: bold;
+}
+
+.limit-reached {
+  color: red;
+}

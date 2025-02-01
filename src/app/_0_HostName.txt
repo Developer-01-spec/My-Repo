@@ -1,0 +1,52 @@
+
+
+CRUD  Operations in Angular:
+
+C: Create   - Post
+
+R: Read     - get
+
+U: Update   - put
+
+D: Delete   - Delete
+
+All Possible API Calls:
+
+Services :variable using get :Observable ---> Html: [(ngModel)] ="Variable" (keyup)= function() declaration   --->  in components: code for this  function()
+
+Displaying All the data we use              get method()          get(url)
+           
+For Displaying Specific Data we use         get method()          get(url)
+
+For filtering the specific Data we use      get method()         "url?filter" = keyword
+
+For creating the pagination we use    get method()     (url)?limit=limitValue "&page" = pagenumber   
+
+For sorting the data we use               get method()    "url?sortBy" = keyword "&order="asc/des
+
+==========
+For Creating the data we can use        post method()       post(url),data
+
+For Update the data we can use          put method()        put(url/id),data
+
+For Deleting the data we can use        delete method()     delete(url)/id
+
+
+We can define a variable to an API to optimize the code.
+
+baseUrl="www.google.com"
+
+we can use baseUrl instead of www.google.com
+
+=================================================================
+
+Reactive Forms:
+
+Form Group: Collection of all input fields in a Form also each input field in a  form we called as form control.
+ go to appmodule.ts --> import reactive forms
+
+
+
+
+
+

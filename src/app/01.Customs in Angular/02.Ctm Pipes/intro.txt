@@ -1,0 +1,24 @@
+Generate Custom Pipe:  ng g p balance // This pipe used for insert rupee symbol in value.
+
+balance.pipe.ts:
+
+name='balance'
+
+export class BalancePipe implements PipeTransform{
+
+transform(value:unknown, ..args:unknown[]):unknown{
+
+return "Rs." + value + "/-";
+
+ // or // return "symbolonly" + value;      we can also insert rupee symbolonly
+  }
+
+}
+
+Insert   balance in html component.
+
+<h2>   {{vehicle.cost | balance }}
+
+
+output: Rs.76/-   
+

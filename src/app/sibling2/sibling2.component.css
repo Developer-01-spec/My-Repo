@@ -1,0 +1,27 @@
+.parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: rgb(233, 222, 64);
+
+  padding-top: 20px;
+}
+
+.input {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.display p {
+  font-size: 16px;
+  color: #007bff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+  background-color: #f9f9f9;
+}

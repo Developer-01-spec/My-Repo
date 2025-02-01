@@ -1,0 +1,12 @@
+
+
+<!-- <p>child works! {{a}}</p> -->
+
+
+<button (click)="send()">Send to Parent</button>
+
+<!-- Ex2: -->
+
+<h2> This Value is from Parent: {{star}}</h2>
+
+<input type="text" [(ngModel)]="moon" placeholder="Child Component" (keyup)="send()">

@@ -1,0 +1,123 @@
+<h1>Create User</h1>
+<!-- FormGroup------------------------------------------------------------------- -->
+<form action="" [formGroup]="userForm">
+  <input type="text" placeholder="Name" id="name" formControlName="name"><br><br>
+  <input type="number" placeholder="Class" id="name" formControlName="class"><br><br>
+  <input type="text" placeholder="Father Name" id="name" formControlName="fathername"><br><br>
+  <input type="text" placeholder="Email" id="email" formControlName="email"><br><br>
+
+  <input type="date" placeholder="DOB" id="dob" formControlName="dob"><br><br>
+
+ 
+<!-----NestedFormGroup-------- -->
+
+            <div formGroupName="address">
+
+                   <input type="text" placeholder="Address Line"  
+                   
+                   formControlName="addressline"><br><br>
+
+                   <input type="text" placeholder="City"  formControlName="city"><br><br>
+
+                   <input type="text" placeholder="State" formControlName="state"><br><br>
+
+<input type="number" placeholder="PinCode"  formControlName="pincode">
+
+<div   *ngIf="userForm.get('address')?.get('pincode')?.invalid && userForm.get('address')?.get('pincode')?.touched">
+
+<p *ngIf="userForm.get('address')?.get('pincode')?.errors?.['required']"> pincode is Required </p>
+
+<p *ngIf="userForm.get('address')?.get('pincode')?.errors?.['min']"> Pincode must in 6 digits</p>
+
+<p *ngIf="userForm.get('address')?.get('pincode')?.errors?.['max']"> Pincode not exceed 6 digits</p>>
+
+
+</div>
+
+                </div>
+                
+
+                   
+
+             
+
+
+
+            <!-------DynamicForms-------- -->
+
+            <label for="">Type :</label><i>&nbsp;</i>
+
+            <input type="radio" name="type" formControlName="type" value="dayscholar"> <i>&nbsp;</i>
+            <label>Dayscholar</label> <i>&nbsp;</i>
+
+            <input type="radio" name="type" formControlName="type" value="residential"><i>&nbsp;</i>
+            <label>Residential</label><i>&nbsp;</i>
+
+
+            <div *ngIf="userForm.get('type')?.value=='dayscholar'">
+            <label for="">Bus Fee</label>
+            <input type="number" formControlName="busfee">
+            
+            </div>
+
+            <div *ngIf="userForm.get('type')?.value=='residential'">
+                <label for="">Hostel Fee</label>
+                <input type="number" formControlName="hostelfee">
+                
+                </div>
+                <br><br>
+
+           <!-- ---------------------Form Array-------------------------------- -->
+
+           <div formGroupName="marks">
+
+            <input type="number" placeholder="Class"formControlName="class"><br><br>
+            
+            <input type="number" placeholder="Percentage"formControlName="percentage"><br><br>
+
+            <div *ngIf="userForm.get('percentage')?.invalid && userForm.get('percentage')?.touched">
+            
+            <p *ngIf="userForm.get('percentage')?.errors?.['required']"> Must Enter Percentage </p>
+            <p *ngIf="userForm.get('percentage')?.errors?.['min']"> Minimum Percentage </p>
+            <p *ngIf="userForm.get('percentage')?.errors?.['max']"> Percentage should not more than 100 </p>
+        </div>
+        
+        <input type="number" placeholder="Year"formControlName="year"><br><br>
+
+
+        </div>
+
+            <button (click)="addmarks()">Add Marks</button>
+
+                <div formArrayName="marks1">
+                    <div *ngFor="let marks of marksFormArray.controls; let i=index">
+                        <div formGroupName="{{i}}">
+                            <h3>Marks{{i+1}}</h3>
+
+                            <label for="">class</label>
+                            <input type="number" formControlName="class"><br>
+
+                            <label for="">Year</label>
+                            <input type="month" formControlName="year"><br>
+
+                            <label for="">Percentage</label>
+                            <input type="number" formControlName="percentage"><br>
+
+
+
+                            <button (click)="delete(i)">Delete Marks</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+  
+
+                <br>
+
+    <button class="btn btn-info" (click)="create()">Create</button>
+
+</form>
+

@@ -1,0 +1,48 @@
+generation: ng g interceptor token   // dont put i, write full name
+
+we can show interceptors token values in console.log ---> headers
+
+ It generate token.interceptor.ts file
+
+write the below code in this file:
+
+
+Step1: 
+
+export class TokenInterceptor implements HttpInterceptor {
+
+  constructor() {}
+
+  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+
+// the above are default one we can write only this part 👇
+
+  👉  let token =sessionStorage.getItem('token');
+
+    request= request.clone({
+      
+      setHeaders:{
+
+        'Authentication':String(token) 👈 // Up to this
+      }
+    })
+    return next.handle(request);
+  }
+}
+
+Step2: 
+
+also write  app.module.ts in Providers[]
+
+providers:[
+
+{
+    provide:HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi:true
+   }
+
+]
+
+
+ 

@@ -1,0 +1,71 @@
+<H1>Accounts Data</H1>
+
+<input type="text" [(ngModel)]="keycolumn" (keyup)="filter()"/>
+
+<!---Dropdown-->
+<select [(ngModel)]="colname">
+
+  <option >account_name</option>
+  <option>available_balance</option>
+  <option>account_number</option>
+  <option>city</option>
+  <option>id</option>
+
+
+</select>
+
+<!-- Sort By-->
+
+<select [(ngModel)]="order">
+  <option>asc</option>
+  <option>desc</option>
+</select>
+<button class="btn btn-primary" (click)="sort()">Sort By</button>
+
+<select [(ngModel)]="limit">
+
+  <option>05</option>
+  <option>10</option>
+  <option>15</option>
+  <option>20</option>
+  <option>25</option>
+</select>
+
+<!-- Sory By-->
+
+<select [(ngModel)]="page">
+  <option>01</option>
+  <option>02</option>
+  <option>03</option>
+</select>
+
+<button class="btn btn-primary" (click)="pagination()"> Pagination </button>
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Account Name</th>
+      <th>Available Balance</th>
+      <th>Account Number</th>
+      <th>City</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+    <tr *ngFor="let accounts of accounts">
+     
+      <td>{{accounts.id }}</td>
+      <td>{{ accounts.account_name }}</td>
+      <td>{{ accounts.available_balance }}</td>
+      <td>{{ accounts.account_number }}</td>
+      <td>{{ accounts.city }}</td>
+      
+      <td>
+        <button class="btn btn-danger" (click)="delete(accounts.id)">
+          <i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
